@@ -1,10 +1,38 @@
 body{ background: #181818; color: white; font-family: 'Roboto', 'Open Sans', sans-serif; }
 h1{ font-weight: normal; font-family: "BN Jinx", 'Roboto', 'Open Sans', sans-serif; font-size: 50px; }
 p{ font-size: 14px; }
+
 .container{ max-width: 1300px; width: 100%; margin: 0 auto; }
-footer ul.icons{ list-style: none; margin: 0; padding: 0; }
+.text-center{ text-align: center; }
+
+.row {
+	margin-right: -15px;
+	margin-left: -15px;
+}
+
+.col-md-4, .col-md-8, .col-xs-12{
+	position: relative;
+	min-height: 1px;
+	padding: 0 15px;
+}
+
+.col-xs-12{ width: 100% }
+@media (min-width: 768px) {
+	.col-sm-12 {
+		float: left;
+		width: 100%;
+	}
+}
+@media (min-width: 992px) {
+	.col-md-4{ float: left; width: 33.3%; }
+	.col-md-8{ float: left; width: 66.7%; }
+}
+
+
+footer ul.icons{ list-style: none; margin: 0; padding: 0; display: inline-block; }
 footer ul.icons li{ float: left; font-size: 36px; padding: 0 10px; }
 footer ul.icons li a{ text-decoration: none; color: #ccc; transition: all .2s;  }
+
 .fa-twitter:hover, .fa-telegram:hover{ color: #1da1f2; }
 .fa-instagram:hover{ background: -webkit-linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 .fa-youtube:hover{ color: red; }
