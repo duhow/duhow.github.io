@@ -1,0 +1,22 @@
+/* TEAM */
+	Webmaster: David Giron
+	Twitter: @duhowpi
+	From: Barcelona, Spain
+
+/* THANKS */
+
+	Kyngo: Arnau
+	Twitter: @kyngonet
+	Site: http://kyngo.net
+	Location: Barcelona, Spain
+
+	Almamu: Alexis
+	Twitter: @AlmamuPP
+	Site: http://almamu.com
+	Location: Alicante, Spain
+
+/* SITE */
+
+	Language: Castellano / Spanish
+	Doctype: HTML5
+	IDE: Sublime Text, Notepad++, FileZilla, Photoshop
