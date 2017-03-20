@@ -1,0 +1,10 @@
+# Idea de HTML5 Boilerplate
+# https://github.com/h5bp/html5-boilerplate/blob/master/dist/.htaccess#L505
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_URI} "!(^|/)\.well-known/([^./]+./?)+$" [NC]
+    RewriteCond %{SCRIPT_FILENAME} -d [OR]
+    RewriteCond %{SCRIPT_FILENAME} -f
+    RewriteRule "(^|/)\." - [F]
+</IfModule>
