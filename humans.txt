@@ -1,6 +1,6 @@
 /* TEAM */
 	Webmaster: David Giron
-	Twitter: @duhowpi
+	Telegram: @duhow
 	From: Barcelona, Spain
 
 /* THANKS */
@@ -16,7 +16,7 @@
 	Location: Alicante, Spain
 
 /* SITE */
-
-	Language: Castellano / Spanish
+	Last update: 2017/08/26
+	Language: Spanish
 	Doctype: HTML5
-	IDE: Sublime Text, Notepad++, FileZilla, Photoshop
+	IDE: Atom, Sublime Text, Notepad++, FileZilla, Photoshop
