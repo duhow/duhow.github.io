@@ -2,9 +2,26 @@
 # https://github.com/h5bp/html5-boilerplate/blob/master/dist/.htaccess#L505
 
 <IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteCond %{REQUEST_URI} "!(^|/)\.well-known/([^./]+./?)+$" [NC]
-    RewriteCond %{SCRIPT_FILENAME} -d [OR]
-    RewriteCond %{SCRIPT_FILENAME} -f
-    RewriteRule "(^|/)\." - [F]
+	RewriteEngine On
+	RewriteCond %{REQUEST_URI} "!(^|/)\.well-known/([^./]+./?)+$" [NC]
+	RewriteCond %{SCRIPT_FILENAME} -d [OR]
+	RewriteCond %{SCRIPT_FILENAME} -f
+	RewriteRule "(^|/)\." - [F]
+</IfModule>
+
+<IfModule mod_http2.c>
+	<IfModule mod_headers.c>
+		Header add Link "</css/main.css>;rel=preload"
+	</IfModule>
+</IfModule>
+
+<IfModule mod_expires.c>
+	ExpiresActive On 
+	
+	ExpiresByType text/css			"access plus 2 weeks"
+	ExpiresByType font/truetype             "access plus 1 month"
+	ExpiresByType font/opentype             "access plus 1 month"
+	ExpiresByType application/x-font-woff   "access plus 1 month"
+	ExpiresByType image/svg+xml             "access plus 1 month"
+	ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
 </IfModule>

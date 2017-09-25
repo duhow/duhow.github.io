@@ -16,7 +16,7 @@
 	Location: Alicante, Spain
 
 /* SITE */
-	Last update: 2017/08/26
+	Last update: 2017/09/25
 	Language: Spanish
 	Doctype: HTML5
 	IDE: Atom, Sublime Text, Notepad++, FileZilla, Photoshop

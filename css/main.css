@@ -30,9 +30,9 @@ p{ font-size: 14px; }
 
 main{max-width: 320px; width: 320px; margin: 0 auto;}
 
-ul.social{ list-style: none; margin: 0; padding: 0; display: inline-block; }
-ul.social li{ float: left; font-size: 36px; padding: 0 10px; }
-ul.social li a{ text-decoration: none; color: #ccc; transition: all .2s;  }
+section.social ul{ list-style: none; margin: 0; padding: 0; display: inline-block; }
+section.social ul li{ float: left; font-size: 36px; padding: 0 10px; }
+section.social ul li a{ text-decoration: none; color: #ccc; transition: all .2s;  }
 
 a{text-decoration: none; color: #EEE; font-weight: bold;}
 a:hover{color: #999;}
