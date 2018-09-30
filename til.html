@@ -3,21 +3,21 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-		<title>duhowpi</title>
+		<title>Today I Learned > duhowpi</title>
 		<meta name="theme-color" content="#181818">
 		<meta name="msapplication-TileColor" content="#181818">
 		<link rel="apple-touch-icon" href="/favicon.png" sizes="192x192">
 		<link rel="icon" href="/favicon.png" type="image/png" sizes="192x192">
 		<link rel="icon" href="/favicon.ico" type="image/x-icon">
-		<meta name="description" content="Administrador de sistemas y programador web.">
+		<meta name="description" content="Today I learned...">
 		<meta name="twitter:card" content="summary">
 		<meta name="twitter:site" content="@duhowpi">
 		<meta name="twitter:title" content="duhowpi">
-		<meta name="twitter:description" content="Administrador de sistemas y programador web.">
+		<meta name="twitter:description" content="Today I learned...">
 		<meta name="twitter:image" content="/img/twitter_card.png">
-		<meta property="og:title" content="duhowpi">
+		<meta property="og:title" content="Today I learned > duhowpi">
 		<meta property="og:type" content="website">
-		<meta property="og:description" content="Administrador de sistemas y programador web.">
+		<meta property="og:description" content="Today I learned...">
 		<meta property="og:image" content="/img/facebook.png">
 		<link rel="author" href="https://plus.google.com/116308967804889036277">
 		<link rel="author" href="/humans.txt" type="text/plain">
@@ -39,34 +39,16 @@
 		</style>
 	</head>
 	<body class="container">
-		<main>
+		<main class="full">
 			<section class="main">
-				<h1>duhowpi</h1>
-				<p class="bio">
-					Administrador de sistemas y programador web. <br>
-					También conocido como <b>informático</b>. 🖥️ <br>
-					Explorador del 🌍 y amante de la tecnología.
-				</p>
-				<p class="current">
-					💼 Actualmente trabajando <a href="https://www.edrans.com/es" target="_blank" rel="noopener">en edrans</a> <br>
-					👨‍💻 como Site Operator / Analista de sistemas.
-				</p>
-				<p class="history">
-					📖 He trabajado en <a href="https://adam.es" target="_blank" rel="noopener">Adam</a> y en <a href="https://www.futbollab.com" target="_blank" rel="noopener">FutbolLab</a> <br>
-					👨‍💻 como Administrador de sistemas. <br>
-					👤 También he desarrollado al <a href="https://t.me/ProfesorOak_bot" target="_blank" rel="noopener">@ProfesorOak_bot</a>. <br>
-					👨‍🎓 Estudié en el <a href="http://esteveterradas.cat" target="_blank" rel="noopener">Instituto Terradas</a>.
-				</p>
-				<p class="til">
-					📓 ¿Quieres ver lo que <a href="/til">he aprendido hoy</a>?
-				</p>
+				<a href="/"><h1>duhowpi</h1></a>
+			</section>
+
+			<section class="til">
+				Hoy he aprendido...
 			</section>
 
 			<section class="social">
-				<p>
-					✉️ Si quieres contactar conmigo, <br>
-					aquí tienes mis principales redes sociales. 😙
-				</p>
 				<ul>
 					<li><a target="_blank" rel="noopener" class="fa fa-telegram" href="https://t.me/duhow"><span class="label">Telegram</span></a></li>
 					<li><a target="_blank" rel="noopener" class="fa fa-github" href="https://github.com/duhow"><span class="label">GitHub</span></a></li>
@@ -78,7 +60,46 @@
 			</section>
 		</main>
 
-		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> -->	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/locale/es.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.6/showdown.min.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+		<script>
+		function getTIL(day){
+			if(typeof day === 'undefined'){
+				d = new Date();
+				m = d.getMonth() + 1;
+				m = m.toString().padStart(2, 0);
+				day = (d.getFullYear() + '-' + m + '-' + d.getDate());
+			}
+
+			$.ajax({
+				url: 'https://raw.githubusercontent.com/duhow/til/master/'+ day +'.md',
+				dataType: "text",
+				success: function(data){
+					md = new showdown.Converter();
+					text = "Hoy he aprendido...\n\n" + data;
+					$("section.til").html(md.makeHtml(text));
+				},
+				error: function(data){
+					$("section.til").text("Hoy no he aprendido nada. O todavia no lo he puesto.");
+				}
+			});
+		}
+		$(function(){
+			$(window).bind('hashchange', function(){
+				var hash = location.hash.replace(/^#/, "");
+				return getTIL(hash);
+			});
+
+			if(location.hash.length > 0){
+				$(window).trigger('hashchange');
+			}else{
+				getTIL();
+			}
+		});
+		</script>
 	</body>
 </html>

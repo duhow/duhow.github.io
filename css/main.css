@@ -1,5 +1,5 @@
 body{ background: #181818; color: white; font-family: 'Roboto', 'Open Sans', sans-serif; }
-h1{ font-weight: normal; font-family: "BN Jinx", 'Roboto', 'Open Sans', sans-serif; font-size: 50px; }
+section.main h1{ width: 320px; text-align: center; margin-left: auto; margin-right: auto; font-weight: normal; font-family: "BN Jinx", 'Roboto', 'Open Sans', sans-serif; font-size: 50px; }
 p{ font-size: 14px; }
 
 .container{ max-width: 1300px; width: 100%; margin: 0 auto; }
@@ -28,7 +28,13 @@ p{ font-size: 14px; }
 	.col-md-8{ float: left; width: 66.7%; }
 }
 
-main{max-width: 320px; width: 320px; margin: 0 auto;}
+main:not(.full){max-width: 320px; width: 320px; margin: 0 auto;}
+main.full{margin: 0 auto;}
+main.full h1:first-child{text-align: center;}
+section.til{margin: 15px 0;}
+section.til blockquote{ padding: 5px 10px; border-left: 5px solid grey; }
+section.til blockquote p{ margin: 2px; }
+
 
 section.social ul{ list-style: none; margin: 0; padding: 0; display: inline-block; }
 section.social ul li{ float: left; font-size: 36px; padding: 0 10px; }
