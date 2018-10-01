@@ -72,7 +72,8 @@
 				d = new Date();
 				m = d.getMonth() + 1;
 				m = m.toString().padStart(2, 0);
-				day = (d.getFullYear() + '-' + m + '-' + d.getDate());
+				w = d.getDate().toString().padStart(2, 0);
+				day = (d.getFullYear() + '-' + m + '-' + w);
 			}
 
 			$.ajax({
