@@ -9,6 +9,7 @@
 	RewriteRule "(^|/)\." - [F]
 
   RewriteRule ^til$ til.html [L,NC]
+  RewriteRule ^resume$ resume.html [L,NC]
 </IfModule>
 
 <IfModule mod_http2.c>
