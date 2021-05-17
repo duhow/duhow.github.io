@@ -5,18 +5,22 @@
 
 /* THANKS */
 
+	jamque: Rafel
+	Twitter: @jamqueTPM
+	Location: Barcelona, Spain
+
 	Kyngo: Arnau
 	Twitter: @kyngonet
-	Site: http://kyngo.net
+	Site: https://kyngo.net
 	Location: Barcelona, Spain
 
 	Almamu: Alexis
 	Twitter: @AlmamuPP
-	Site: http://almamu.com
+	Site: https://almamu.com
 	Location: Alicante, Spain
 
 /* SITE */
-	Last update: 2017/09/25
+	Last update: 2021/05/17
 	Language: Spanish
 	Doctype: HTML5
 	IDE: Atom, Sublime Text, Notepad++, FileZilla, Photoshop
