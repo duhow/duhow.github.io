@@ -36,7 +36,7 @@ section.til blockquote{ padding: 5px 10px; border-left: 5px solid grey; }
 section.til blockquote p{ margin: 2px; }
 
 
-section.social ul{ list-style: none; margin: 0; padding: 0; display: inline-block; }
+section.social ul{ list-style: none; margin: 0; padding: 0; margin-left: 75px; display: inline-block; }
 section.social ul li{ float: left; font-size: 36px; padding: 0 10px; }
 section.social ul li a{ text-decoration: none; color: #ccc; transition: all .2s;  }
 
