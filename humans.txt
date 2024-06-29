@@ -20,7 +20,7 @@
 	Location: Alicante, Spain
 
 /* SITE */
-	Last update: 2023-05-18
+	Last update: 2024-06-29
 	Language: Spanish
 	Doctype: HTML5
 	IDE: NeoVim, oh-my-zsh
